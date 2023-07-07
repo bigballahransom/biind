@@ -1,7 +1,11 @@
 import { View, Text, Image, StyleSheet } from "react-native";
+import { TweetType } from '../types';
 
+type TweetProps = {
+    tweet: TweetType;
+}
 
-const Tweet = ({tweet}) => {
+const Tweet = ({tweet}: TweetProps) => {
     return (
     <View style={styles.container}>
       <Image 
@@ -28,7 +32,7 @@ const styles = StyleSheet.create({
     },
     userImage: {
       width: 50, 
-      height: 50, 
+      height: 50,
       borderRadius: 50,
     },
     mainContainer: {
@@ -41,7 +45,7 @@ const styles = StyleSheet.create({
     content: {
       lineHeight: 20,
       marginTop: 5,
-    }
+    },
   });
 
   export default Tweet;
